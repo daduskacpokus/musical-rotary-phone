@@ -1,0 +1,10 @@
+services:
+  nexp-app:
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=$NODE_ENV            
+    image: "nextjs-app:$BUILD_ID"
